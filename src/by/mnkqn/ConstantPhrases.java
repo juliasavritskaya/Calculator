@@ -8,13 +8,13 @@ public class ConstantPhrases {
 
     public String selectOperatorText() {
         return "Select operations from the list: " +
-                "1 - sum, " +
-                "2 - subtraction, " +
-                "3 - multiplication, " +
-                "4 - division, " +
-                "5 - exponentiation" +
-                "6 - sqrt" +
-                "0 - exit";
+                "\n1 - sum, " +
+                "\n2 - subtraction, " +
+                "\n3 - multiplication, " +
+                "\n4 - division, " +
+                "\n5 - exponentiation " +
+                "\n6 - sqrt " +
+                "\n0 - exit.";
     }
 
     public String inputAText() {
