@@ -43,7 +43,7 @@ public class Calculator {
                     result = division(inputA, inputB);
                     break;
             }
-            System.out.printf(phrases.resultIsText() + result);
+            System.out.println(phrases.resultIsText() + result);
 
             System.out.println(phrases.contintext());
             int con = scan.nextInt();
