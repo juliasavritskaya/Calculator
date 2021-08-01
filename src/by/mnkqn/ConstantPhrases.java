@@ -9,10 +9,12 @@ public class ConstantPhrases {
     public String selectOperatorText() {
         return "Select operations from the list: " +
                 "1 - sum, " +
-                "2 - minus, " +
+                "2 - subtraction, " +
                 "3 - multiplication, " +
                 "4 - division, " +
-                "5 - exit";
+                "5 - exponentiation" +
+                "6 - sqrt" +
+                "0 - exit";
     }
 
     public String inputAText() {
@@ -27,11 +29,11 @@ public class ConstantPhrases {
         return "The result is: ";
     }
 
-    public String contintext() {
+    public String continText() {
         return "Continue? 1 - yes, 2 - no.";
     }
 
-    public String unknownSymboltext(){
+    public String unknownSymbolText() {
         return "Unknown symbol";
     }
 
