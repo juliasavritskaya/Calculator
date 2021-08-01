@@ -4,6 +4,15 @@ import java.util.Scanner;
 
 public class Calculator {
 
+    final int exitOperator = 0;
+    final int sumOperator = 1;
+    final int subtractionOperator = 2;
+    final int multiplicationOperator = 3;
+    final int divisionOperator = 4;
+    final int exponentiationOperator = 5;
+    final int sqrtOperator = 6;
+    double result = 0;
+
     ConstantPhrases phrases = new ConstantPhrases();
 
     public void run() {
@@ -16,36 +25,42 @@ public class Calculator {
         Scanner scan = new Scanner(System.in);
 
         System.out.println(phrases.selectOperatorText());
-
         int operationType = scan.nextInt();
-        if (operationType == 5) {
+        if (operationType == exitOperator) {
             exit();
         } else {
 
             System.out.println(phrases.inputAText());
             double inputA = scan.nextDouble();
 
-            System.out.println(phrases.inputBText());
-            double inputB = scan.nextDouble();
+            if (operationType == sqrtOperator) {
+                result = sqrt(inputA);
+            } else {
 
-            double result = 0;
-            switch (operationType) {
-                case 1:
-                    result = sum(inputA, inputB);
-                    break;
-                case 2:
-                    result = minus(inputA, inputB);
-                    break;
-                case 3:
-                    result = multiplication(inputA, inputB);
-                    break;
-                case 4:
-                    result = division(inputA, inputB);
-                    break;
+                System.out.println(phrases.inputBText());
+                double inputB = scan.nextDouble();
+
+                switch (operationType) {
+                    case sumOperator:
+                        result = sum(inputA, inputB);
+                        break;
+                    case subtractionOperator:
+                        result = subtraction(inputA, inputB);
+                        break;
+                    case multiplicationOperator:
+                        result = multiplication(inputA, inputB);
+                        break;
+                    case divisionOperator:
+                        result = division(inputA, inputB);
+                        break;
+                    case exponentiationOperator:
+                        result = pow(inputA, inputB);
+                }
             }
+
             System.out.println(phrases.resultIsText() + result);
 
-            System.out.println(phrases.contintext());
+            System.out.println(phrases.continText());
             int con = scan.nextInt();
             continueWorking(con);
 
@@ -59,7 +74,7 @@ public class Calculator {
         } else if (con == 2) {
             exit();
         } else {
-            System.out.println(phrases.unknownSymboltext());
+            System.out.println(phrases.unknownSymbolText());
         }
     }
 
@@ -71,7 +86,7 @@ public class Calculator {
         return a + b;
     }
 
-    public double minus(double a, double b) {
+    public double subtraction(double a, double b) {
         return a - b;
     }
 
@@ -81,5 +96,13 @@ public class Calculator {
 
     public double division(double a, double b) {
         return a / b;
+    }
+
+    public double pow(double a, double b) {
+        return Math.pow(a, b);
+    }
+
+    public double sqrt(double a) {
+        return Math.sqrt(a);
     }
 }
