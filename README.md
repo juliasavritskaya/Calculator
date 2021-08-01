@@ -13,7 +13,7 @@ java Main
 
 **example:**
 
-cd D:\Javaprojects\epam\calculator\src>
+cd D:\Javaprojects\epam\calculator\src
 
 javac by/mnkqn/Main.java
 
