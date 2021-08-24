@@ -1,7 +1,3 @@
-# epamtasks
-hometasks for epam java course
-
-
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 open via command line:
 
